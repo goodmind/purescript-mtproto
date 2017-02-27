@@ -1,0 +1,19 @@
+{
+  "name": "purescript-mtproto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel js_src --out-file src/MTProto.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "telegram-mtproto": "https://github.com/zerobias/telegram-mtproto#mtproto2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-latest": "^6.22.0"
+  }
+}

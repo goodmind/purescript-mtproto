@@ -1,0 +1,19 @@
+{
+  "name": "purescript-mtproto",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^2.4.0",
+    "purescript-console": "^2.0.0",
+    "purescript-foreign": "^3.2.0",
+    "purescript-aff-promise": "^0.4.0",
+    "purescript-debug": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0"
+  }
+}
