@@ -7,16 +7,34 @@ import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (log) as Eff
 import Control.Monad.Eff.Exception (Error, EXCEPTION)
 import Data.Either (Either(..))
-import Data.Foreign (Foreign, toForeign)
-import Data.Foreign.Class (readProp)
-import Data.Int.Bits (xor)
 import Data.Maybe (Maybe(..))
 import Debug.Trace (traceAny)
-import MTProto (ApiManager, newApiManager, mtpInvokeApi, MANAGER, MTPROTO)
+import MTProto (ApiManager, MANAGER, MTPROTO, mtpInvokeApi, newApiManager)
+
+{--
+newAsyncStorage :: AsyncStorage
+newAsyncStorage = Just $ NewAsyncStorage { get, set, remove, clear }
+  where
+    get keys = Nothing
+    set obj = Nothing
+    remove keys = Nothing
+    clear = Nothing
+--}
 
 newManager :: forall e. Eff (manager :: MANAGER | e) ApiManager
-newManager =
-  newApiManager Nothing
+newManager = do
+  newApiManager config
+  where
+    config = Just {
+      api : Nothing,
+      app : Just {
+        debug : Just true,
+        storage : Nothing -- newAsyncStorage
+      },
+      server : Nothing,
+      schema : Nothing,
+      mtSchema : Nothing
+    }
 
 getConfig :: forall e a. ApiManager -> (Aff (mtproto :: MTPROTO | e) (Either Error a))
 getConfig = 
