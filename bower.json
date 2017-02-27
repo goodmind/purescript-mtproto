@@ -1,6 +1,10 @@
 {
   "name": "purescript-mtproto",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goodmind/purescript-mtproto.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
