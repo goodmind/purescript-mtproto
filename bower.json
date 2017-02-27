@@ -11,7 +11,8 @@
     "purescript-console": "^2.0.0",
     "purescript-foreign": "^3.2.0",
     "purescript-aff-promise": "^0.4.0",
-    "purescript-debug": "^2.0.0"
+    "purescript-debug": "^2.0.0",
+    "purescript-foreign-options": "https://github.com/goodmind/purescript-foreign-options.git#v0.1.2"
   },
   "devDependencies": {
     "purescript-psci-support": "^2.0.0"
