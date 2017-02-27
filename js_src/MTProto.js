@@ -1,6 +1,8 @@
 import { ApiManager } from 'telegram-mtproto'
 
-exports._newApiManager = (config) => () => new ApiManager(config)
+exports._newApiManager = (config, toOptions) => () => new ApiManager(
+  toOptions(config)
+)
 
 exports._newApiManagerEmpty = () => new ApiManager()
 

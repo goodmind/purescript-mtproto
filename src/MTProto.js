@@ -25,9 +25,9 @@ var ApiError = exports.ApiError = function (_Error) {
 
 var _telegramMtproto = require('telegram-mtproto');
 
-exports._newApiManager = function (config) {
+exports._newApiManager = function (config, toOptions) {
   return function () {
-    return new _telegramMtproto.ApiManager(config);
+    return new _telegramMtproto.ApiManager(toOptions(config));
   };
 };
 
