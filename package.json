@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "telegram-mtproto": "https://github.com/zerobias/telegram-mtproto#mtproto2"
+    "telegram-mtproto": "^2.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
