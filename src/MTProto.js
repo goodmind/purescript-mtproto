@@ -36,7 +36,7 @@ exports._newApiManagerEmpty = function () {
 };
 
 exports._mtpInvokeApi = function (method, params, options, manager) {
-  return manager.mtpInvokeApi(method, params, options).catch(function (err) {
+  return manager(method, params, options).catch(function (err) {
     return Promise.reject(new ApiError(err));
   });
 };

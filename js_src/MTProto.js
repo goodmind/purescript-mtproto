@@ -7,8 +7,7 @@ exports._newApiManager = (config, toOptions) => () => new ApiManager(
 exports._newApiManagerEmpty = () => new ApiManager()
 
 exports._mtpInvokeApi = (method, params, options, manager) => {
-  return manager
-    .mtpInvokeApi(method, params, options)
+  return manager(method, params, options)
     .catch(err => Promise.reject(new ApiError(err)))
 }
 
