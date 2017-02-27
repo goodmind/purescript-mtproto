@@ -1,5 +1,6 @@
 {
   "name": "purescript-mtproto",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
